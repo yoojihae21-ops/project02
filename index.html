@@ -51,25 +51,28 @@
     </div>
 
     <script>
-        let isScrolling = false;
+        if (window.innerWidth > 768) {
+            // 900px 스크롤 적용
+            let isScrolling = false;
 
-        window.addEventListener('wheel', (e) => {
-            e.preventDefault();
+            window.addEventListener('wheel', (e) => {
+                e.preventDefault();
 
-            if (isScrolling) return;
-            isScrolling = true;
+                if (isScrolling) return;
+                isScrolling = true;
 
-            const move = e.deltaY > 0 ? 900 : -900;
+                const move = e.deltaY > 0 ? 900 : -900;
 
-            window.scrollBy({
-                top: move,
-                behavior: 'smooth'
-            });
+                window.scrollBy({
+                    top: move,
+                    behavior: 'smooth'
+                });
 
-            setTimeout(() => {
-                isScrolling = false;
-            }, 500);
-        }, { passive: false });
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 500);
+            }, { passive: false });
+        }
     </script>
 </body>
 
