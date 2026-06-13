@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project02</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            position: relative;
+        }
+
+        .main_img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .obj {
+            position: absolute;
+            top: 180px;
+            right: 80px;
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="./img/obj.png" alt="" class="obj">
+        <img src="./img/may.jpg" alt="" class="main_img">
+    </div>
+</body>
+
+</html>
